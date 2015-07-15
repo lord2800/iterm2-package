@@ -1,0 +1,6 @@
+#!/bin/bash
+
+grep 'shell_integration' /etc/skel/.bash_profile
+if [ $? -eq 0 ]; then
+	echo 'source $HOME/.shell_integration' > /etc/skel/.bash_profile
+fi
